@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<ul>
+	<li><a href="">A</a></li>
+	<li>
+	<a href="">B</a></li>
+	</ul>
+	
+	<button id="btn">Hide</button>
+<script> 
+
+$(document).ready(
+					function()
+					{
+						$("#btn").click(
+						
+							function()
+							{
+								$("ul li:nth-child(2)").hide();
+							}
+						);	
+					}
+
+				 );
+
+
+</script>
+</body>
+</html>

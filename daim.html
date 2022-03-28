@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<p class="p1"> 
+		this is first paragrph
+	</p>
+	<p class="p1">
+		This is second paragrph
+	</p>
+	<button id="btn">Hide</button>
+<script> 
+
+$(document).ready(
+					function()
+					{
+						$("#btn").click(
+						
+							function()
+							{
+								$(".p1").hide();
+							}
+						);	
+					}
+
+				 );
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+</head>
+<body style="display:flex">
+<div id="main" style="width:50vw;height:50vh;border:1px solid blue"> 
+	<div class="player1"> 
+		<img src="avatar3.png" class="img" width="100" height="100"/>
+		<div class="stat"> 
+			Matches:100
+			<br/> 
+			Catches:50
+		</div>
+	</div>
+	<div class="player2"> 
+		<img src="avatar3.png" class="img" width="100" height="100"/>
+		<div class="stat"> 
+			Matches:200
+			<br/> 
+			Catches:50
+		</div>
+	</div>
+</div>
+<div id="drop" style="width:50vw;height:50vh;border:1px solid blue">
+
+
+</div>
+<script> 
+$(function(){
+	$(".player1 .stat").hide();
+	$(".player1").draggable({helper:"clone"});
+	$(".player2 .stat").hide();
+	$(".player2").draggable();
+	
+	$("#drop").droppable({
+
+		drop:function()
+		{
+			
+			$("#main .stat").hide();
+			$(".player1 .stat").show();
+
+		}
+	});
+
+
+
+
+});
+
+</script>
+</body>
+</html>

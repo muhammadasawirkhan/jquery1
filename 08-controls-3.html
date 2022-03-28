@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Controls</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+</head>
+<body>
+<!-- 
+
+
+DOB:<input type="text" id="box1"/>
+-->
+<div id="tabs"> 
+	<a href="#teachers">Teachers</a>
+	<a href="#courses">Courses</a>
+	<a href="#students">Students</a>
+	
+	<div id="students">	
+			<h1>List of Students</h1>
+			<p> 
+				Student-1
+				<br/>
+				Student-2
+				<br/>
+				Student-3
+
+			</p>
+	</div>
+	<div id="teachers">	
+	<h1>List of Teachers</h1>
+	<p> 
+		T-1
+		<br/>
+		T-2
+		<br/>
+		T-3
+
+	</p>
+	</div>
+	<div id="courses">	
+		<h1>List of Courses</h1>
+		<p> 
+			C-1
+			<br/>
+			C-2
+			<br/>
+			C-3
+
+		</p>
+	</div>
+</div>
+<script> 
+$(function(){
+	//$("#box1").datepicker();
+	$("#tabs").tabs(
+		heightStyle:"fill",  
+               collapsible:true,  
+               hide:"slideUp" 
+	);//accordion().sortable();
+});
+
+
+</script>
+</body>
+</html>

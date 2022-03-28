@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+	body{
+		display: flex;
+	}
+	#p1{
+		position: absolute;
+		width: 200px;
+		height: 100px;
+		background-color: blue;
+		z-index: -1;
+	}
+
+	</style>
+</head>
+<body>
+<div id="p1">
+</div>
+
+	<button class="btn">Red</button>
+	<button class="btn1">Green</button>
+<script> 
+//$("#p1").hide();
+$(document).ready(
+					function()
+					{
+						$(".btn").click(
+						
+							function()
+							{
+								
+			$("#p1").css("background-color",'red');
+			
+							}
+						);
+						$(".btn1").click(
+						
+							function()
+							{
+							$('.btn').hide();	
+			$("#p1").css("background-color",'green');
+			
+							}
+						);	
+					}
+
+				 );
+
+
+</script>
+</body>
+</html>
